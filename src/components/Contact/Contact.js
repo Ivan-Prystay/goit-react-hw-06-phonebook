@@ -7,14 +7,13 @@ import { ContactItem, DeleteContact } from './Contact.styled';
 export function Contact({ contact }) {
   const { id, name, number } = contact;
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(id));
 
   return (
     <ContactItem key={id}>
       {name}
       {': '}
       {number}
-      <DeleteContact type="button" onClick={handleDelete}>
+      <DeleteContact type="button" onClick={() => dispatch(deleteContact(id))}>
         Delete contact
       </DeleteContact>
     </ContactItem>

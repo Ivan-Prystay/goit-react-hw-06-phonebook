@@ -12,7 +12,6 @@ import {
 
 export function ContactForm() {
   const contacts = useSelector(getContacts);
-  console.log('contacts: ', contacts);
 
   const dispatch = useDispatch();
   const handleSubmit = event => {
